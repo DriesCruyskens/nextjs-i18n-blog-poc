@@ -1,4 +1,6 @@
 import type { NextPage, GetStaticProps } from "next";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import BlogPost from "../../interfaces/blog-post";
 import { getAllBlogPosts } from "../../lib/api";
 
@@ -7,12 +9,23 @@ type Props = {
 };
 
 const Blog: NextPage<Props> = ({ blogPosts }) => {
+  const router = useRouter();
+
   return (
     <>
       <h1>welcome to the blog</h1>
       <ul>
         {blogPosts.map((post) => (
-          <li key={post.slug}>{post.title}</li>
+          <li key={post.slug}>
+            <Link
+              href={{
+                pathname: `${router.route}/[slug]`,
+                query: { slug: post.slug },
+              }}
+            >
+              <a>{post.title}</a>
+            </Link>
+          </li>
         ))}
       </ul>
     </>
