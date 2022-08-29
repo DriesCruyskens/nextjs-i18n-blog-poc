@@ -4,11 +4,11 @@ import { ReactNode } from "react";
 import styles from "./NavLink.module.scss";
 
 type Props = {
-  children: ReactNode;
-  href: string;
+  children?: ReactNode;
+  href?: string;
 };
 
-function NavLink({ children, href }: Props) {
+function NavLink({ children, href = "/" }: Props) {
   const router = useRouter();
 
   return (
