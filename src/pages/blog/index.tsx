@@ -1,7 +1,7 @@
 import type { NextPage, GetStaticProps } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import BlogPost from "../../interfaces/blog-post";
+import BlogPost from "../../types/BlogPost";
 import { getAllBlogPosts } from "../../lib/api";
 
 type Props = {

@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import ReactMarkdown from "react-markdown";
-import BlogPost from "../../interfaces/blog-post";
+import BlogPost from "../../types/BlogPost";
 import {
   getAllBlogPosts,
   getBlogPostBySlug,
