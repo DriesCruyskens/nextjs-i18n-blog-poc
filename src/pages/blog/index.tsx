@@ -12,8 +12,8 @@ const Blog: NextPage<Props> = ({ blogPosts }) => {
   const router = useRouter();
 
   return (
-    <>
-      <h1>welcome to the blog</h1>
+    <div className="w-4/5 m-auto">
+      <h1 className="pb-3">welcome to the blog</h1>
       <ul>
         {blogPosts.map((post) => (
           <li key={post.slug}>
@@ -23,12 +23,12 @@ const Blog: NextPage<Props> = ({ blogPosts }) => {
                 query: { slug: post.slug },
               }}
             >
-              <a>{post.title}</a>
+              <a>- {post.title}</a>
             </Link>
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 };
 

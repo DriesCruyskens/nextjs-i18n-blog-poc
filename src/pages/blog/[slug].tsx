@@ -12,10 +12,10 @@ type Props = {
 
 const blogPost: NextPage<Props> = ({ post }) => {
   return (
-    <>
-      <h1>{post.title}</h1>
+    <div className="w-4/5 m-auto my-10">
+      <h1 className="text-2xl mb-5">{post.title}</h1>
       <ReactMarkdown children={post.content!}></ReactMarkdown>
-    </>
+    </div>
   );
 };
 
