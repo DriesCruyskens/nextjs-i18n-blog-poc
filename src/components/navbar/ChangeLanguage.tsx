@@ -34,6 +34,7 @@ const ChangeLanguage = () => {
 
                 return (
                   <div
+                    key={locale}
                     className={`${
                       !selected && "hover:bg-blue-300"
                     } px-2 py-1 m-0 rounded flex items-center`}
